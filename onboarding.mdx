@@ -1,0 +1,66 @@
+---
+title: "Onboarding"
+description: "What happens the first time you sign in to Flux, step by step."
+---
+
+When you first sign in to Flux, the Setup wizard takes over the main area of the app with a progress bar along the top. The wizard walks you from a brand-new account to your first metrics flowing in. It is a one-time flow; once you finish, everything you did here moves to permanent pages in the sidebar.
+
+## Welcome
+
+The first screen welcomes you and explains that the rest of the wizard is about connecting the tools your team uses, from source control through to incident response. Skip anything you do not use; you can add it later. Click **Get started** to move on.
+
+![Welcome screen placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Welcome+screen)
+{/* TODO screenshot: the onboarding Welcome screen. Capture the whole wizard card including the progress bar at the top, the "Welcome to Positron Flux!" heading, the subtitle paragraph, and the single "Get started" button. Use a fresh demo account so nothing extra is on the screen. */}
+
+## Tell Flux about your organization and product
+
+The next screen asks for your company name, a product name, and a short, plain-English description of what the product does. Flux is organised around products: a product is one piece of software your team ships. If you have several, start with the most important one and add others later. Fill the form in and click **Continue**.
+
+![Company and product form placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Company+%2B+product+form)
+{/* TODO screenshot: the Setup screen with the three form fields visible (company name, product name, product description). Either leave the fields empty to show the placeholders, or fill them in with the StratusLogic demo values (StratusLogic / StratusCore / short product description). Keep the progress bar and the Continue button in the frame. */}
+
+## The connector stages
+
+From here, the wizard walks you through one category of tool at a time. Each screen has a question as its heading, a short subtitle that explains what kind of tool Flux is asking about, and a card for the primary connector choice. There may also be cards for alternative connectors that provide the same kind of data.
+
+In order, the stages ask:
+
+1. How do you plan your work? (project trackers, such as Jira or Linear)
+2. Where does your code live? (source control, such as GitHub, GitLab, BitBucket, or Azure DevOps; you cannot skip this stage)
+3. How does your code get built? (your CI system)
+4. How do you test your code? (tools that report on test behaviour)
+5. How does your code ship? (your deployment system, such as Harness)
+6. How do you keep an eye on things? (monitoring, such as Datadog)
+7. What happens when things break? (incident management, such as PagerDuty, Rootly, or FireHydrant)
+8. Where does your team talk? (chat, such as Slack or Discord)
+
+![A connector stage placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Connector+stage+example)
+{/* TODO screenshot: a representative connector stage. Use the source-control stage ("Where does your code live?") because it is the required one and shows the pattern clearly. Capture the question heading, the subtitle, the primary connector card (GitHub, un-selected), any secondary connector cards, and the Back and Continue buttons at the bottom. */}
+
+## Skipping a stage
+
+On every stage except source control, clicking **Continue** without connecting anything opens a small confirmation dialog asking whether you really want to continue without that category of tools. It warns that some metrics and tools will not be available, but reminds you that you can configure the connector later. Click **Continue anyway** to move on, or **Cancel** to stay on the stage.
+
+Skipping a stage costs you nothing beyond the metrics that depend on that category. Nothing else breaks, and you can add the connector afterwards from [Organization → Connections](/connections).
+
+![Skip confirmation dialog placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Skip+confirmation+dialog)
+{/* TODO screenshot: the skip confirmation modal that appears when you click Continue on a stage without configuring the primary connector. Trigger it from any non-required stage (e.g., the monitoring stage). Capture the modal heading ("Continue without monitoring tools?" or equivalent), the explanatory text, and the Cancel and Continue anyway buttons. The background of the underlying stage will be dimmed. */}
+
+## The source-control stage has no skip
+
+On the source-control stage, the **Continue** button stays unavailable until you have configured a connector. You cannot leave this step without picking a source-control tool.
+
+## Invite your team
+
+After the last connector stage, the wizard asks you to invite teammates. Type or paste email addresses and click **Add** after each; you can add up to ten people here. If you would rather invite people later, leave the list empty and click **Continue**. Team management also lives at **Organization → Members**, so you can always come back.
+
+## Done
+
+The final screen summarises what was connected and confirms you are ready to go. From there, you land on the Dashboard.
+
+<Note>
+After onboarding finishes, Flux runs a first backfill of each connected tool in the background. Expect the Dashboard to look sparse or empty for about 30 minutes while this runs. The metrics fill in as the backfill progresses, so refresh the page from time to time to see new data appear.
+</Note>
+
+![Done screen placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Done+screen)
+{/* TODO screenshot: the final Done screen of the wizard. Capture the "🎉 You're all set!" heading, the subtitle, the summary list of stages with their configured/skipped state, and the primary button that takes you to the Dashboard. Use a demo account with a realistic mix of connected and skipped stages so the list shows both states. */}

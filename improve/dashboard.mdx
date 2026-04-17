@@ -1,0 +1,29 @@
+---
+title: "Reading the Dashboard"
+description: "How to interpret the Delivery Metrics Dashboard, filter it, and drill into what you see."
+---
+
+The Dashboard is where you see how your team is delivering. It opens automatically when you sign in (once at least one connector is feeding data) and lives at the top of the main sidebar afterwards.
+
+## What each chart tells you
+
+Four time-series charts sit at the top of the Dashboard, one per headline metric. Deployment Frequency tracks how often your team ships to production: higher numbers mean smaller, more frequent releases and usually more confident ones. Lead Time for Changes measures how long a commit takes to reach production; lower is better, because short lead times mean fewer bottlenecks in the pipeline. Change Failure Rate is the share of deployments that needed remediation (a rollback, a hotfix, or an incident), so lower is better here too. Mean Time to Recovery measures how long production failures last before they are resolved; again, shorter is better.
+
+Each chart plots your team's values over time, with industry benchmark bands shaded behind the line so you can tell at a glance whether your current value sits in the Elite, High, Medium, or Low band. The band a metric is in matters more than its absolute value, because it puts your numbers in context against what other teams achieve.
+
+![Dashboard placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Delivery+Metrics+Dashboard)
+{/* TODO screenshot: the Delivery Metrics Dashboard for the StratusLogic demo account. Capture the four headline charts (Deployment Frequency, Lead Time for Changes, Change Failure Rate, Mean Time to Recovery) with visible trend lines and the benchmark bands behind them. Keep the filter controls at the top in frame. */}
+
+## Focusing on a team, product, or time range
+
+The filter controls at the top of the Dashboard let you narrow the view. Pick a team to see only that team's metrics, pick a product to scope to one piece of software, or pick a time range to zoom in on a specific week, month, or quarter. Filters stick as you move around the Dashboard, so you do not have to reset them every time you drill in or out.
+
+## Drilling into a number
+
+Click any chart, or any point on a chart, to open the analysis view for that metric. The current filters carry over, so if you were looking at Team Alpha for the last 30 days, you land in the analysis with Team Alpha and the last 30 days already applied. From the analysis view you can see which of the 55 secondary metrics moved at the same time as the headline one. See [Finding what drives your numbers](/improve/secondary-metrics) for what to do from there.
+
+## What is normal when data is missing
+
+The Dashboard handles partial data gracefully. A brand-new account shows an empty state that points you at connecting your first tool. A partially-connected account plots what it can and leaves the rest with an explanation of which connector is missing. If you have just finished onboarding, expect the Dashboard to look sparse for about 30 minutes while Flux backfills history from your connected tools, and refresh from time to time to see the charts fill in.
+
+If one metric never has data (for example, Mean Time to Recovery when no incident-management connector is hooked up), Flux tells you which connector would populate it, so you know what to add next.

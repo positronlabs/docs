@@ -1,0 +1,22 @@
+---
+title: "Improving your delivery"
+description: "How to use Flux to measure, understand, and improve how your team ships software."
+---
+
+Using Flux to improve delivery is a three-step loop you run over and over: see what is happening, understand what is shaping it, change something and measure the result.
+
+## See what is happening
+
+The Dashboard is where every investigation starts. It shows your four headline metrics (Deployment Frequency, Lead Time for Changes, Change Failure Rate, Mean Time to Recovery) and any custom SLIs or SLOs you have set up, plotted over time with industry bands for reference. See [Reading the Dashboard](/improve/dashboard).
+
+## Understand what is shaping it
+
+When a metric moves, the Secondary Metrics Catalog (the 55 factors that tend to influence delivery) and the anomaly correlator tell you what else moved at the same time. The result is a story, like "lead time is up 25% because PR size went up and reviews slowed," not just a number. See [Finding what drives your numbers](/improve/secondary-metrics).
+
+## Change something and measure the result
+
+Flux gives you two levers. Platform tools nudge day-to-day developer behaviour from the systems your team already uses, such as GitHub and Slack. The Experiment Workbench turns a configuration change into a structured before-and-after measurement, so you can tell whether the change actually moved the metric you cared about. See [Enabling platform tools](/improve/platform-tools) and [Running an experiment](/improve/experiments).
+
+## Pace yourself
+
+Delivery moves slowly; meaningful changes show up over weeks, not days. Pick one metric to focus on, pick one experiment or tool to try, and give it four weeks before judging the result. Attacking everything at once produces noise you cannot untangle.

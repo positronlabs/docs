@@ -1,0 +1,25 @@
+---
+title: "Installing and managing connectors"
+description: "How the Connections page works when you want to add, change, or remove a connector after onboarding."
+---
+
+Once onboarding is done, all connector management lives at **Organization → Connections** in the main sidebar. The page is a catalog of every tool Flux supports: the ones your team has already installed are highlighted with a bright ring around the card, and the rest sit alongside them as options you can add.
+
+![Connections page placeholder](https://placehold.co/1200x675/eef1f3/111827?text=Screenshot%3A+Connections+catalog)
+{/* TODO screenshot: the Connections page with a realistic mix of installed and available connectors visible. Capture the search box and filter row (Status, Category, Sort) at the top, and a grid of cards below including at least two installed connectors (with the highlighted ring around them) and several available ones. Use the StratusLogic demo account. */}
+
+## Finding the connector you want
+
+If you know the tool's name, the quickest way is to type it into the search box at the top of the page. If you are browsing rather than searching, the **Category** dropdown narrows the catalog by kind of tool (Source Control, CI/CD, Issue Tracking, Chat, and so on), and the **Status** dropdown lets you jump straight to the connectors you have already installed.
+
+## Installing a new connector
+
+Find the connector's card in the catalog and click the **Install** button at the bottom of the card. Flux takes you to a detail page for that connector where you complete the authorization flow with the tool (sign in, review the permissions Flux is asking for, accept). When you come back, the card has moved to the installed state: it now has the highlighted ring around it, and the button has changed to **Configure**.
+
+## Changing or disconnecting an installed connector
+
+Click **Configure** on the connector's card. That takes you to the connector's detail page, where you can change what Flux reads from the tool (for example, add a new GitHub repository the team just created) or disconnect the connector altogether if you no longer want Flux reading from that tool.
+
+## Who can install, configure, and disconnect
+
+Connectors are shared by everyone in your Flux organization, so the actions that change them are restricted to admins. If you are signed in as a member, the catalog looks the same, but installing and configuring are unavailable. Ask an admin on your team if you need a connector installed or changed.
